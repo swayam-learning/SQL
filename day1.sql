@@ -40,9 +40,25 @@ SELECT * FROM workers  WHERE first_name LIKE "%H";
  SELECT * FROM workers  WHERE first_name LIKE "_A%";
  SELECT * FROM workers  WHERE first_name LIKE "__V%E%";
  SELECT * FROM workers  WHERE first_name LIKE "__V%A";
- -- in the above query my intent is to find name which has third letter as V and ends with A
+  -- in the above query my intent is to find name which has third letter as V and ends with A
+SELECT * FROM workers 
+WHERE first_name REGEXP '^[vac]';
+-- in the above line we want to select those columns which have name starting from either v or a or c
 
- -- Sorting of Data
+SELECT * FROM workers 
+WHERE first_name REGEXP '[vac]';
+-- Since there's no ^ at the beginning of the regular expression,
+--  it will match first_name values that contain 'v', 'a', or 'c' anywhere in the string, not just at the beginning.
+
+SELECT * FROM workers 
+WHERE first_name REGEXP '^[a-f]';
+-- Select all records where the first letter of the City starts with anything from an "a" to an "f".
+
+SELECT * FROM workers 
+WHERE first_name REGEXP '^[^acf]';
+-- Select all records where the first letter of the City is NOT an "a" or a "c" or an "f".
+
+--  Sorting of Data
  SELECT * FROM workers ORDER BY SALARY; -- ASC ASCENDING IS BY DEFAULT
  SELECT * FROM workers ORDER BY SALARY DESC;
  
@@ -84,6 +100,6 @@ SELECT DEPARTMENT,count(SALARY),FIRST_NAME FROM WORKERS GROUP BY DEPARTMENT,FIRS
 -- 5. If you are using HAVING, GROUP BY is necessary.
 -- 6. WHERE can be used with SELECT, UPDATE & DELETE keywords while GROUP BY used with SELECT
 
-
+select * from workers where salary between 100000 and 110000;
 
 
