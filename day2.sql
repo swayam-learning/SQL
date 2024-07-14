@@ -21,4 +21,4 @@ select department,count(department),sum(salary) from workers group by department
 -- ;
 
 -- UNIQUE -- can have null values
-
+select * from worker_details;
