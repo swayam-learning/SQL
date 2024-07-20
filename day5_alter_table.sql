@@ -37,3 +37,12 @@ select * from staff;
 -- renaming the column back to original name
 alter table staff
 rename to workers;
+
+-- renaming table in sakila database
+use sakila;
+alter table actor 
+rename to abhineta;
+select * from abhineta;
+
+-- also works
+rename table abhineta to actors;
