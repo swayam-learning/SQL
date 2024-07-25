@@ -42,6 +42,9 @@ values("Akash", "Mishra", '9998887776', "akash@gmail.com", '2024-01-21', 1, 4, "
       ("Akhil","George","7689558930", "akhil.george.8743@gmail.com", '2024-03-13', 3, 4, "Accenture", "Community", '2024-03-25', "Bengaluru"),
       ("Sidhish","Kumar","6475765443", "sidhishkumar@gmail.com",'2024-01-10', 1, 4, "Meta", "Youtube", '2024-03-29', "Bengaluru"),
       ("NagaSai","Sreedhar","9182937061", "saisreedhar2001@gmail.com", '2024-03-17', 3, 4, "TCS", "Community", '2024-03-25', "Mumbai");
+insert into learners(LearnerFirstName,LearnerLastName,LearnerPhoneNo,LearnerEmailId,LearnerEnrollmentDate,SelectedCourse,YearsOfExperience,LearnerComapny,SourceOfJoining,BatchStartDate,Location)
+values("Akash", "Mishra", '9998887776', "akash1@gmail.com", '2024-01-21', 1, 4, "Amazon", "Youtube", '2024-02-27', "Bengaluru");
+
 select * from learners;
 -- Data Analysis [employee,learners,course]
 -- 1. Record of the employee getting highest salary
